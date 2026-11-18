@@ -1,0 +1,1083 @@
+{
+ "source": "Чертежи по этапу 1 (3).pdf, листы 02/04/05/06, М 1:35",
+ "units": "mm",
+ "ceiling_height": 2745,
+ "rooms": [
+  {
+   "id": "living",
+   "name": "Прихожая-кухня-гостиная",
+   "area_m2_drawing": 33.28,
+   "polygon": [
+    [
+     0,
+     6080
+    ],
+    [
+     0,
+     3935
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     1570,
+     0
+    ],
+    [
+     1570,
+     -175
+    ],
+    [
+     3920,
+     -175
+    ],
+    [
+     3920,
+     0
+    ],
+    [
+     4430,
+     0
+    ],
+    [
+     4430,
+     3935
+    ],
+    [
+     4645,
+     3935
+    ],
+    [
+     4645,
+     3885
+    ],
+    [
+     5545,
+     3885
+    ],
+    [
+     5545,
+     3935
+    ],
+    [
+     5680,
+     3935
+    ],
+    [
+     5680,
+     4747
+    ],
+    [
+     5730,
+     4747
+    ],
+    [
+     5730,
+     5647
+    ],
+    [
+     5680,
+     5647
+    ],
+    [
+     5680,
+     6715
+    ],
+    [
+     5490,
+     6715
+    ],
+    [
+     5490,
+     6785
+    ],
+    [
+     4460,
+     6785
+    ],
+    [
+     4460,
+     6715
+    ],
+    [
+     3400,
+     6715
+    ],
+    [
+     3400,
+     4865
+    ],
+    [
+     3320,
+     4865
+    ],
+    [
+     3320,
+     6080
+    ],
+    [
+     3320,
+     6715
+    ],
+    [
+     585,
+     6715
+    ],
+    [
+     585,
+     6080
+    ]
+   ]
+  },
+  {
+   "id": "bedroom",
+   "name": "Спальня",
+   "area_m2_drawing": 11.8,
+   "polygon": [
+    [
+     5545,
+     3835
+    ],
+    [
+     5545,
+     3885
+    ],
+    [
+     4645,
+     3885
+    ],
+    [
+     4645,
+     3835
+    ],
+    [
+     4530,
+     3835
+    ],
+    [
+     4530,
+     0
+    ],
+    [
+     4690,
+     0
+    ],
+    [
+     4690,
+     -175
+    ],
+    [
+     6140,
+     -175
+    ],
+    [
+     6140,
+     0
+    ],
+    [
+     7530,
+     0
+    ],
+    [
+     7530,
+     3835
+    ]
+   ]
+  },
+  {
+   "id": "bath",
+   "name": "Ванная комната",
+   "area_m2_drawing": 4.69,
+   "polygon": [
+    [
+     5780,
+     5647
+    ],
+    [
+     5730,
+     5647
+    ],
+    [
+     5730,
+     4745
+    ],
+    [
+     5780,
+     4745
+    ],
+    [
+     5780,
+     3935
+    ],
+    [
+     7530,
+     3935
+    ],
+    [
+     7530,
+     6335
+    ],
+    [
+     6950,
+     6335
+    ],
+    [
+     6950,
+     6715
+    ],
+    [
+     5780,
+     6715
+    ],
+    [
+     5780,
+     6335
+    ]
+   ]
+  }
+ ],
+ "walls": [
+  {
+   "rect": [
+    -250,
+    -300,
+    0,
+    0
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    -250,
+    0,
+    0,
+    6715
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    -250,
+    6715,
+    0,
+    6965
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    0,
+    -300,
+    1570,
+    0
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    0,
+    6080,
+    535,
+    6130
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    0,
+    6715,
+    4450,
+    6965
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    535,
+    6130,
+    585,
+    6715
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    585,
+    6669,
+    3320,
+    6715
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    3320,
+    4780,
+    3400,
+    5525
+   ],
+   "kind": "new"
+  },
+  {
+   "rect": [
+    3320,
+    5525,
+    3400,
+    6715
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    3920,
+    -300,
+    4690,
+    0
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    4430,
+    0,
+    4530,
+    3835
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    4430,
+    3835,
+    4530,
+    3935
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    4530,
+    3835,
+    4645,
+    3935
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    5490,
+    6715,
+    5780,
+    6965
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    5545,
+    3835,
+    5680,
+    3935
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    5680,
+    3835,
+    5780,
+    3935
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    5680,
+    3935,
+    5780,
+    4747
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    5680,
+    5647,
+    5780,
+    6715
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    5780,
+    3835,
+    7530,
+    3935
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    5780,
+    6715,
+    7530,
+    6965
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    6140,
+    -300,
+    7530,
+    0
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    6950,
+    6385,
+    7000,
+    6715
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    7000,
+    6335,
+    7527,
+    6385
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    7530,
+    -300,
+    7780,
+    0
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    7530,
+    0,
+    7780,
+    3920
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    7530,
+    3920,
+    7780,
+    6715
+   ],
+   "kind": "existing"
+  },
+  {
+   "rect": [
+    7530,
+    6715,
+    7780,
+    6965
+   ],
+   "kind": "existing"
+  }
+ ],
+ "openings": [
+  {
+   "id": "win_living",
+   "type": "window",
+   "axis": "x",
+   "x": [
+    1570,
+    3920
+   ],
+   "y": [
+    -300,
+    0
+   ],
+   "sill": 0,
+   "head": 2350,
+   "leaves": 2
+  },
+  {
+   "id": "win_bedroom",
+   "type": "window",
+   "axis": "x",
+   "x": [
+    4690,
+    6140
+   ],
+   "y": [
+    -300,
+    0
+   ],
+   "sill": 0,
+   "head": 2350,
+   "leaves": 2,
+   "split": 160
+  },
+  {
+   "id": "door_entry",
+   "type": "door",
+   "axis": "x",
+   "x": [
+    4450,
+    5490
+   ],
+   "y": [
+    6715,
+    6965
+   ],
+   "sill": 0,
+   "head": 2110,
+   "style": "entry"
+  },
+  {
+   "id": "door_bedroom",
+   "type": "door",
+   "axis": "x",
+   "x": [
+    4645,
+    5545
+   ],
+   "y": [
+    3835,
+    3935
+   ],
+   "sill": 0,
+   "head": 2080,
+   "style": "interior",
+   "leaf": [
+    4705,
+    5505
+   ]
+  },
+  {
+   "id": "door_bath",
+   "type": "door",
+   "axis": "y",
+   "x": [
+    5680,
+    5780
+   ],
+   "y": [
+    4747,
+    5647
+   ],
+   "sill": 0,
+   "head": 2080,
+   "style": "interior",
+   "leaf": [
+    4797,
+    5597
+   ]
+  }
+ ],
+ "built_ins": [
+  {
+   "id": "shaft_kitchen",
+   "rect": [
+    0,
+    6080,
+    585,
+    6715
+   ],
+   "h": 2745
+  },
+  {
+   "id": "shaft_bath",
+   "rect": [
+    6950,
+    6335,
+    7530,
+    6715
+   ],
+   "h": 2745
+  },
+  {
+   "id": "wc_installation",
+   "rect": [
+    7300,
+    5535,
+    7530,
+    6335
+   ],
+   "h": 1200
+  },
+  {
+   "id": "bath_screen_wall",
+   "rect": [
+    5780,
+    4630,
+    7530,
+    4685
+   ],
+   "h": 600
+  }
+ ],
+ "radiators": [
+  {
+   "id": "rad_living",
+   "rect": [
+    1090,
+    0,
+    1370,
+    90
+   ],
+   "h": 1800
+  },
+  {
+   "id": "rad_bedroom",
+   "rect": [
+    6290,
+    0,
+    6570,
+    90
+   ],
+   "h": 1800
+  }
+ ],
+ "furniture": [
+  {
+   "id": "desk",
+   "room": "living",
+   "type": "desk",
+   "rect": [
+    0,
+    0,
+    700,
+    1300
+   ]
+  },
+  {
+   "id": "ladder_rack",
+   "room": "living",
+   "type": "ladder_rack",
+   "rect": [
+    0,
+    1300,
+    700,
+    1600
+   ]
+  },
+  {
+   "id": "storage",
+   "room": "living",
+   "type": "storage_wall",
+   "rect": [
+    0,
+    1600,
+    400,
+    3100
+   ]
+  },
+  {
+   "id": "sofa",
+   "room": "living",
+   "type": "sofa",
+   "rect": [
+    1830,
+    500,
+    2780,
+    3340
+   ],
+   "main": [
+    1830,
+    1740,
+    2780,
+    3340
+   ],
+   "chaise": [
+    1830,
+    500,
+    3500,
+    1740
+   ],
+   "facing": "+x"
+  },
+  {
+   "id": "rug_living",
+   "room": "living",
+   "type": "rug",
+   "rect": [
+    2030,
+    430,
+    4030,
+    3430
+   ]
+  },
+  {
+   "id": "tv_console",
+   "room": "living",
+   "type": "tv_console",
+   "rect": [
+    4130,
+    900,
+    4430,
+    3300
+   ]
+  },
+  {
+   "id": "tv",
+   "room": "living",
+   "type": "tv",
+   "rect": [
+    4400,
+    1400,
+    4430,
+    2850
+   ],
+   "z": [
+    950,
+    1780
+   ]
+  },
+  {
+   "id": "floor_lamp",
+   "room": "living",
+   "type": "floor_lamp",
+   "pos": [
+    3980,
+    3480
+   ]
+  },
+  {
+   "id": "pendant_living",
+   "room": "living",
+   "type": "pendant_cocoon",
+   "pos": [
+    2700,
+    1900
+   ]
+  },
+  {
+   "id": "dining_table",
+   "room": "living",
+   "type": "round_table",
+   "pos": [
+    1200,
+    4185
+   ],
+   "d": 1000
+  },
+  {
+   "id": "painting_dining",
+   "room": "living",
+   "type": "painting",
+   "rect": [
+    0,
+    3725,
+    30,
+    4625
+   ],
+   "z": [
+    900,
+    2150
+   ],
+   "art": "terracotta"
+  },
+  {
+   "id": "pendant_dining",
+   "room": "living",
+   "type": "pendant_dome",
+   "pos": [
+    1200,
+    4185
+   ],
+   "z": 1550
+  },
+  {
+   "id": "cabinet_sw",
+   "room": "living",
+   "type": "tall_cabinet",
+   "rect": [
+    0,
+    5480,
+    400,
+    6080
+   ]
+  },
+  {
+   "id": "kitchen",
+   "room": "living",
+   "type": "kitchen",
+   "back": [
+    585,
+    6070,
+    3320,
+    6670
+   ],
+   "side": [
+    2720,
+    5380,
+    3320,
+    6070
+   ],
+   "fridge": [
+    2720,
+    4780,
+    3320,
+    5380
+   ],
+   "oven_x": [
+    775,
+    1375
+   ],
+   "sink_y": [
+    5480,
+    5980
+   ],
+   "ceiling_drop": {
+    "rect": [
+     0,
+     4780,
+     3320,
+     6715
+    ],
+    "z": 2745
+   }
+  },
+  {
+   "id": "wardrobe_hall",
+   "room": "living",
+   "type": "wardrobe_hall",
+   "rect": [
+    3400,
+    5515,
+    4000,
+    6715
+   ]
+  },
+  {
+   "id": "pouf",
+   "room": "living",
+   "type": "pouf",
+   "rect": [
+    3420,
+    4830,
+    3800,
+    5500
+   ]
+  },
+  {
+   "id": "hooks",
+   "room": "living",
+   "type": "hooks",
+   "rect": [
+    3400,
+    4900,
+    3420,
+    5400
+   ],
+   "z": 1700
+  },
+  {
+   "id": "mirror_hall",
+   "room": "living",
+   "type": "mirror_framed",
+   "rect": [
+    5660,
+    5750,
+    5680,
+    6350
+   ],
+   "z": [
+    100,
+    2110
+   ]
+  },
+  {
+   "id": "lamp_hall",
+   "room": "living",
+   "type": "drum_light",
+   "pos": [
+    4540,
+    5750
+   ]
+  },
+  {
+   "id": "ladder_bed",
+   "room": "bedroom",
+   "type": "ladder_shelf",
+   "rect": [
+    4530,
+    430,
+    4790,
+    1030
+   ]
+  },
+  {
+   "id": "bed",
+   "room": "bedroom",
+   "type": "bed",
+   "rect": [
+    5220,
+    750,
+    7330,
+    2550
+   ],
+   "head": "+x"
+  },
+  {
+   "id": "headboard_shelf",
+   "room": "bedroom",
+   "type": "headboard",
+   "rect": [
+    7330,
+    650,
+    7530,
+    2650
+   ],
+   "h": 1050
+  },
+  {
+   "id": "nightstand_n",
+   "room": "bedroom",
+   "type": "nightstand",
+   "pos": [
+    7150,
+    400
+   ],
+   "d": 440,
+   "color": "white"
+  },
+  {
+   "id": "nightstand_s",
+   "room": "bedroom",
+   "type": "nightstand",
+   "pos": [
+    7200,
+    2860
+   ],
+   "d": 400,
+   "color": "wood"
+  },
+  {
+   "id": "wardrobe_bed",
+   "room": "bedroom",
+   "type": "wardrobe",
+   "rect": [
+    5780,
+    3235,
+    7530,
+    3835
+   ]
+  },
+  {
+   "id": "rug_bedroom",
+   "room": "bedroom",
+   "type": "rug",
+   "rect": [
+    4650,
+    250,
+    7300,
+    3150
+   ]
+  },
+  {
+   "id": "painting_bed",
+   "room": "bedroom",
+   "type": "painting",
+   "rect": [
+    7500,
+    1050,
+    7530,
+    2250
+   ],
+   "z": [
+    1080,
+    2050
+   ],
+   "art": "blocks"
+  },
+  {
+   "id": "pendant_bed",
+   "room": "bedroom",
+   "type": "pendant_paper",
+   "pos": [
+    6300,
+    1650
+   ],
+   "z": 2000
+  },
+  {
+   "id": "bathtub",
+   "room": "bath",
+   "type": "bathtub",
+   "rect": [
+    5780,
+    3935,
+    7530,
+    4685
+   ]
+  },
+  {
+   "id": "vanity",
+   "room": "bath",
+   "type": "vanity",
+   "rect": [
+    7030,
+    4740,
+    7530,
+    5540
+   ]
+  },
+  {
+   "id": "toilet",
+   "room": "bath",
+   "type": "toilet",
+   "rect": [
+    6770,
+    5750,
+    7300,
+    6120
+   ]
+  },
+  {
+   "id": "washer_stack",
+   "room": "bath",
+   "type": "washer_stack",
+   "rect": [
+    5850,
+    6045,
+    6450,
+    6715
+   ]
+  },
+  {
+   "id": "cat_cabinet",
+   "room": "bath",
+   "type": "cat_cabinet",
+   "rect": [
+    6450,
+    6335,
+    6950,
+    6715
+   ]
+  },
+  {
+   "id": "towel_rail",
+   "room": "bath",
+   "type": "towel_rail",
+   "rect": [
+    5780,
+    4050,
+    5830,
+    4550
+   ],
+   "z": [
+    950,
+    1900
+   ]
+  }
+ ]
+}

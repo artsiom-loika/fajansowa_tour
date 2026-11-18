@@ -1,0 +1,299 @@
+{
+ "living_storage": {
+  "room": "living",
+  "photo": "кухня-гост.png",
+  "pos": [
+   4300,
+   2650,
+   1250
+  ],
+  "target": [
+   0,
+   2650,
+   1200
+  ],
+  "hfov": 82,
+  "size": [
+   1400,
+   700
+  ],
+  "hide": [
+   "sofa",
+   "rug_l",
+   "tvc",
+   "tv",
+   "fl_",
+   "L_floor",
+   "ch_",
+   "rs_"
+  ]
+ },
+ "living_sofa": {
+  "room": "living",
+  "photo": "кухня-гост5.png",
+  "pos": [
+   4380,
+   1810,
+   1200
+  ],
+  "target": [
+   0,
+   1810,
+   1050
+  ],
+  "hfov": 72,
+  "size": [
+   1000,
+   1000
+  ],
+  "hide": [
+   "tvc",
+   "tv"
+  ]
+ },
+ "living_tv": {
+  "room": "living",
+  "photo": "кухня-гост2.png",
+  "pos": [
+   1300,
+   2300,
+   1250
+  ],
+  "target": [
+   4430,
+   2600,
+   1150
+  ],
+  "hfov": 86,
+  "size": [
+   1400,
+   718
+  ],
+  "hide": [
+   "sofa"
+  ]
+ },
+ "living_window": {
+  "room": "living",
+  "photo": "кухня-гост3.png",
+  "pos": [
+   3950,
+   4500,
+   1450
+  ],
+  "target": [
+   2600,
+   0,
+   1300
+  ],
+  "hfov": 74,
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "kitchen": {
+  "room": "kitchen",
+  "photo": "кухня1.png",
+  "pos": [
+   1750,
+   3150,
+   1350
+  ],
+  "target": [
+   1750,
+   6715,
+   1050
+  ],
+  "hfov": 68,
+  "size": [
+   1000,
+   1000
+  ]
+ },
+ "hall": {
+  "room": "hall",
+  "photo": "прихожая.png",
+  "pos": [
+   5150,
+   3990,
+   1500
+  ],
+  "target": [
+   4700,
+   6965,
+   1150
+  ],
+  "hfov": 86,
+  "size": [
+   1000,
+   1000
+  ]
+ },
+ "bedroom": {
+  "room": "bedroom",
+  "photo": "IMG_8735.PNG",
+  "pos": [
+   4600,
+   1700,
+   1450
+  ],
+  "target": [
+   7530,
+   1350,
+   950
+  ],
+  "hfov": 90,
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "bath": {
+  "room": "bath",
+  "photo": "ванная.png",
+  "pos": [
+   5830,
+   5450,
+   1350
+  ],
+  "target": [
+   7530,
+   5450,
+   1150
+  ],
+  "hfov": 88,
+  "size": [
+   800,
+   1200
+  ]
+ },
+ "living_desk": {
+  "room": "living",
+  "photo": "new_desk",
+  "pos": [
+   3000,
+   1500,
+   1200
+  ],
+  "target": [
+   0,
+   1500,
+   1150
+  ],
+  "hfov": 62,
+  "size": [
+   1000,
+   1000
+  ],
+  "hide": [
+   "sofa",
+   "rug_l",
+   "pl_",
+   "L_pend_liv",
+   "fl_",
+   "L_floor"
+  ]
+ },
+ "living_new": {
+  "room": "living",
+  "photo": "new_living",
+  "pos": [
+   2215,
+   5300,
+   1300
+  ],
+  "target": [
+   2215,
+   0,
+   1350
+  ],
+  "hfov": 84,
+  "size": [
+   1200,
+   900
+  ]
+ },
+ "bedroom_shelf": {
+  "room": "bedroom",
+  "photo": "new_bedroom_shelf",
+  "pos": [
+   6150,
+   2500,
+   1400
+  ],
+  "target": [
+   4530,
+   730,
+   1400
+  ],
+  "hfov": 46,
+  "size": [
+   700,
+   1050
+  ]
+ },
+ "desk_rack": {
+  "room": "living",
+  "photo": "new_desk_rack",
+  "pos": [
+   2400,
+   2600,
+   1350
+  ],
+  "target": [
+   300,
+   1100,
+   1200
+  ],
+  "hfov": 50,
+  "size": [
+   600,
+   1280
+  ],
+  "hide": [
+   "sofa",
+   "rug_l",
+   "pl_",
+   "L_pend_liv"
+  ]
+ },
+ "dining_cabinet": {
+  "room": "kitchen",
+  "photo": "",
+  "pos": [
+   1900,
+   4300,
+   1300
+  ],
+  "target": [
+   200,
+   5780,
+   1900
+  ],
+  "hfov": 55,
+  "size": [
+   750,
+   1250
+  ]
+ },
+ "sofa_close": {
+  "room": "living",
+  "photo": "new_sofa2",
+  "pos": [
+   3900,
+   2800,
+   1500
+  ],
+  "target": [
+   2400,
+   1500,
+   300
+  ],
+  "hfov": 64,
+  "size": [
+   1200,
+   820
+  ]
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "living_floor": {
+  "scale": 3.49540376663208,
+  "gamma": 2.2,
+  "size": 2048
+ },
+ "living_walls": {
+  "scale": 4.292586517333983,
+  "gamma": 2.2,
+  "size": 2048
+ },
+ "bedroom_floor": {
+  "scale": 4.01900701522827,
+  "gamma": 2.2,
+  "size": 1024
+ },
+ "bedroom_walls": {
+  "scale": 2.9576719284057615,
+  "gamma": 2.2,
+  "size": 1536
+ },
+ "bath_shell": {
+  "scale": 4.09162678718566,
+  "gamma": 2.2,
+  "size": 1536
+ },
+ "windows": {
+  "scale": 5.668637371063234,
+  "gamma": 2.2,
+  "size": 1024
+ },
+ "doors": {
+  "scale": 4.979504108428955,
+  "gamma": 2.2,
+  "size": 1024
+ },
+ "living_furn": {
+  "scale": 3.706618871688842,
+  "gamma": 2.2,
+  "size": 2048
+ },
+ "dining": {
+  "scale": 4.302989587783787,
+  "gamma": 2.2,
+  "size": 1536
+ },
+ "kitchen": {
+  "scale": 3.834559249877934,
+  "gamma": 2.2,
+  "size": 2048
+ },
+ "hall": {
+  "scale": 4.72416651725769,
+  "gamma": 2.2,
+  "size": 1536
+ },
+ "bedroom_furn": {
+  "scale": 4.301139988899232,
+  "gamma": 2.2,
+  "size": 2048
+ },
+ "bath_furn": {
+  "scale": 4.530529308319091,
+  "gamma": 2.2,
+  "size": 2048
+ }
+}
