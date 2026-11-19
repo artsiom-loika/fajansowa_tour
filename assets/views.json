@@ -295,5 +295,244 @@
    1200,
    820
   ]
+ },
+ "open_storage": {
+  "room": "living",
+  "pos": [
+   2300,
+   2350,
+   1450
+  ],
+  "target": [
+   200,
+   2350,
+   1150
+  ],
+  "hfov": 78,
+  "size": [
+   1000,
+   900
+  ],
+  "hide": [
+   "sofa",
+   "rug_l",
+   "pl_",
+   "L_pend_liv"
+  ],
+  "photo": ""
+ },
+ "open_tvc": {
+  "room": "living",
+  "pos": [
+   2350,
+   2100,
+   1250
+  ],
+  "target": [
+   4430,
+   2100,
+   380
+  ],
+  "hfov": 92,
+  "size": [
+   1200,
+   800
+  ],
+  "hide": [
+   "sofa",
+   "pl_",
+   "L_pend_liv"
+  ],
+  "photo": ""
+ },
+ "open_dining": {
+  "room": "kitchen",
+  "pos": [
+   1650,
+   5700,
+   1450
+  ],
+  "target": [
+   150,
+   5650,
+   1250
+  ],
+  "hfov": 78,
+  "size": [
+   900,
+   1100
+  ],
+  "photo": ""
+ },
+ "open_kitchen": {
+  "room": "kitchen",
+  "pos": [
+   1850,
+   4900,
+   1750
+  ],
+  "target": [
+   1900,
+   6450,
+   350
+  ],
+  "hfov": 80,
+  "size": [
+   1100,
+   900
+  ],
+  "photo": ""
+ },
+ "open_fridge": {
+  "room": "kitchen",
+  "pos": [
+   1400,
+   5200,
+   1450
+  ],
+  "target": [
+   2900,
+   5050,
+   1250
+  ],
+  "hfov": 72,
+  "size": [
+   900,
+   1100
+  ],
+  "photo": ""
+ },
+ "open_hall": {
+  "room": "hall",
+  "pos": [
+   5350,
+   6050,
+   1500
+  ],
+  "target": [
+   3600,
+   6115,
+   1250
+  ],
+  "hfov": 82,
+  "size": [
+   1000,
+   1000
+  ],
+  "photo": ""
+ },
+ "open_wardrobe": {
+  "room": "bedroom",
+  "pos": [
+   6650,
+   1700,
+   1550
+  ],
+  "target": [
+   6650,
+   3600,
+   1150
+  ],
+  "hfov": 88,
+  "size": [
+   1100,
+   900
+  ],
+  "photo": ""
+ },
+ "open_bath_a": {
+  "room": "bath",
+  "pos": [
+   5900,
+   4850,
+   1450
+  ],
+  "target": [
+   7530,
+   5900,
+   1250
+  ],
+  "hfov": 92,
+  "size": [
+   1000,
+   1000
+  ],
+  "photo": ""
+ },
+ "open_bath_b": {
+  "room": "bath",
+  "pos": [
+   7000,
+   4850,
+   1550
+  ],
+  "target": [
+   6100,
+   6715,
+   1350
+  ],
+  "hfov": 88,
+  "size": [
+   1000,
+   1000
+  ],
+  "photo": ""
+ },
+ "open_drawer": {
+  "room": "kitchen",
+  "photo": "",
+  "pos": [
+   1500,
+   5300,
+   1500
+  ],
+  "target": [
+   1680,
+   6100,
+   300
+  ],
+  "hfov": 70,
+  "size": [
+   1000,
+   900
+  ]
+ },
+ "open_corner": {
+  "room": "kitchen",
+  "photo": "",
+  "pos": [
+   1600,
+   5300,
+   1450
+  ],
+  "target": [
+   2900,
+   5750,
+   350
+  ],
+  "hfov": 72,
+  "size": [
+   1000,
+   900
+  ]
+ },
+ "open_doors": {
+  "room": "hall",
+  "photo": "",
+  "pos": [
+   4300,
+   5000,
+   1550
+  ],
+  "target": [
+   5900,
+   3900,
+   1200
+  ],
+  "hfov": 88,
+  "size": [
+   1100,
+   900
+  ]
  }
 }

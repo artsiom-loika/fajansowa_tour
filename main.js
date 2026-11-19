@@ -25,8 +25,10 @@ const manager = new THREE.LoadingManager();
 const bar = document.querySelector("#loader i");
 manager.onProgress = (_, a, b) => (bar.style.width = `${(100 * a) / b}%`);
 
-const [plan, views, lmMeta] = await Promise.all(
-  ["assets/plan.json", "assets/views.json", "assets/lightmaps.json"].map((u) => fetch(u).then((r) => r.json())));
+const [plan, views, lmMeta, doorMeta] = await Promise.all(
+  ["assets/plan.json", "assets/views.json", "assets/lightmaps.json", "assets/doors.json"].map((u) => fetch(u).then((r) => (r.ok ? r.json() : {}))));
+// movable cabinet parts (doors, drawers, flaps): node name -> { lm, kind: rot|slide, axis, angle | slide }
+const partOf = (o) => { for (let p = o; p; p = p.parent) if (doorMeta[p.name]) return p.name; return null; };
 
 // ------------------------------------------------------------------ model
 const texLoader = new THREE.TextureLoader(manager);
@@ -34,7 +36,7 @@ const lightmaps = {};
 const [gltf] = await Promise.all([
   new GLTFLoader(manager).loadAsync("assets/flat.glb"),
   ...Object.entries(lmMeta).map(async ([g, m]) => {
-    const t = await texLoader.loadAsync(`assets/lm_${g}.png`);
+    const t = await texLoader.loadAsync(`assets/lm_${g}.jpg`);
     t.flipY = false; t.colorSpace = THREE.SRGBColorSpace; t.channel = 1;
     // no mip-maps: averaged texels bleed light across UV-island seams (bright lines at wall/ceiling joins)
     t.generateMipmaps = false; t.minFilter = THREE.LinearFilter;
@@ -46,7 +48,8 @@ const mirrors = [];
 gltf.scene.traverse((o) => {
   if (!o.isMesh) return;
   const g = (o.parent && lightmaps[o.parent.name] ? o.parent.name : o.name).replace(/_\d+$/, "");
-  const lm = lightmaps[g] || lightmaps[o.name];
+  const pn = partOf(o);
+  const lm = pn ? lightmaps[doorMeta[pn].lm] : lightmaps[g] || lightmaps[o.name];
   const src = o.material;
   const name = src.name || "";
   if (name === "glass") {   // only the window / shower panes; vases and holders stay as baked
@@ -65,6 +68,66 @@ gltf.scene.traverse((o) => {
 });
 scene.add(gltf.scene);
 window.__scene = scene;
+
+// ------------------------------------------------------------------ cabinets: click a front to open / close it
+const parts = {};
+for (const [name, meta] of Object.entries(doorMeta)) {
+  const node = gltf.scene.getObjectByName(name);
+  if (!node) continue;
+  const meshes = [];
+  node.traverse((o) => o.isMesh && meshes.push(o));
+  parts[name] = {
+    node, meta, meshes, t: 0, goal: 0, pos0: node.position.clone(), q0: node.quaternion.clone(),
+    axis: meta.axis && new THREE.Vector3(...meta.axis), slide: meta.slide && new THREE.Vector3(...meta.slide),
+  };
+}
+const partList = Object.values(parts);
+window.__parts = parts; window.__cam = camera;
+const partMeshes = partList.flatMap((p) => p.meshes);
+const occluders = [];
+gltf.scene.traverse((o) => {
+  if (!o.isMesh) return;
+  const n = (o.parent && o.parent.name) || o.name;
+  if (/^(living_walls|bedroom_walls|bath_shell|doors)/.test(n) || /^(living_walls|bedroom_walls|bath_shell|doors)/.test(o.name)) occluders.push(o);
+});
+const _q = new THREE.Quaternion();
+function applyPart(p) {
+  const s = p.t * p.t * (3 - 2 * p.t);
+  if (p.meta.kind === "rot") p.node.quaternion.copy(_q.setFromAxisAngle(p.axis, p.meta.angle * s)).multiply(p.q0);
+  else p.node.position.copy(p.pos0).addScaledVector(p.slide, s);
+}
+// fronts that would hit each other (kitchen corner: waste pull-out vs. dishwasher door / corner pull-out) list each
+// other in `conflicts`: opening one closes the others; "open all" skips parts marked all: false
+// inner drawers (`requires`) only move while their outer front is open: closing the front closes them too
+function toggle(p) {
+  p.goal = p.goal ? 0 : 1;
+  if (p.goal) {
+    for (const n of p.meta.conflicts || []) if (parts[n]) parts[n].goal = 0;
+    if (p.meta.requires && parts[p.meta.requires]) parts[p.meta.requires].goal = 1;
+  } else for (const q of partList) if (q.meta.requires === p.node.name) q.goal = 0;
+  updateCabBtn();
+}
+const inAll = (p) => p.meta.all !== false;
+function setAll(open, instant = false) {
+  for (const p of partList) { p.goal = open && inAll(p) ? 1 : 0; if (instant) { p.t = p.goal; applyPart(p); } }
+  updateCabBtn();
+}
+let hover = null;
+function highlight(p) {
+  if (hover === p) return;
+  if (hover) for (const m of hover.meshes) m.material.emissive.setHex(0x000000);
+  hover = p;
+  if (p) for (const m of p.meshes) m.material.emissive.setHex(0x2b2116);
+  el_cursor(p ? "pointer" : "");
+}
+function pickPart(ndc) {
+  const rc = new THREE.Raycaster(); rc.setFromCamera(ndc, camera);
+  const hit = rc.intersectObjects(partMeshes, false)[0];
+  if (!hit) return null;
+  const wall = rc.intersectObjects(occluders, false)[0];
+  if (wall && wall.distance < hit.distance - 0.02) return null;
+  return parts[partOf(hit.object)] || null;
+}
 
 // unlit ceiling-coloured cap 5 mm above the ceiling: hairline cracks at wall/ceiling joins show this instead of the neighbouring room
 const cap = new THREE.Mesh(new THREE.PlaneGeometry(9, 8), new THREE.MeshBasicMaterial({ color: 0x9c9388, side: THREE.DoubleSide }));
@@ -128,9 +191,11 @@ function walkTo(x, y) {
 }
 
 const el = renderer.domElement;
-let drag = null;
+const el_cursor = (c) => (el.style.cursor = c);
+let drag = null, hoverAt = null;
 el.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, y: e.clientY, moved: 0 }; el.setPointerCapture(e.pointerId); });
 el.addEventListener("pointermove", (e) => {
+  if (e.pointerType === "mouse") hoverAt = new THREE.Vector2((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
   if (!drag) return;
   const dx = e.clientX - drag.x, dy = e.clientY - drag.y; drag.moved += Math.abs(dx) + Math.abs(dy);
   drag.x = e.clientX; drag.y = e.clientY;
@@ -142,13 +207,16 @@ el.addEventListener("pointerup", (e) => {
     const ndc = new THREE.Vector2((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
     const rc = new THREE.Raycaster(); rc.setFromCamera(ndc, camera);
     const hit = rc.intersectObjects(scene.children, true)[0];
-    if (hit && hit.face && hit.face.normal.y > 0.7 && hit.point.y < 0.05) {
+    const pn = hit && partOf(hit.object);
+    if (pn && parts[pn]) toggle(parts[pn]);
+    else if (hit && hit.face && hit.face.normal.y > 0.7 && hit.point.y < 0.05) {
       const x = hit.point.x * 1000, y = hit.point.z * 1000;
       if (walkable(x, y)) walkTo(x, y);
     }
   }
   drag = null;
 });
+el.addEventListener("pointerleave", () => { hoverAt = null; highlight(null); });
 el.addEventListener("wheel", (e) => { camera.fov = Math.max(35, Math.min(90, camera.fov + e.deltaY * 0.03)); camera.updateProjectionMatrix(); }, { passive: true });
 const keys = new Set();
 addEventListener("keydown", (e) => keys.add(e.code));
@@ -166,6 +234,11 @@ for (const [id, label] of ROOMS) {
   b.onclick = () => { setView(views[id]); for (const x of Object.values(buttons)) x.classList.remove("on"); b.classList.add("on"); };
   roomsEl.appendChild(b); buttons[id] = b;
 }
+const cabBtn = document.createElement("button");
+cabBtn.className = "cab";
+cabBtn.onclick = () => setAll(partList.some((p) => inAll(p) && p.goal === 0));
+function updateCabBtn() { cabBtn.textContent = partList.some((p) => inAll(p) && p.goal === 0) ? "Открыть шкафы" : "Закрыть шкафы"; }
+if (partList.length) { roomsEl.appendChild(cabBtn); updateCabBtn(); }
 // mini-map
 const NS = "http://www.w3.org/2000/svg";
 const svg = document.createElementNS(NS, "svg");
@@ -203,9 +276,17 @@ addEventListener("resize", () => {
   renderer.setSize(innerWidth, innerHeight); camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
 });
 
+if (qs.get("open") === "all") setAll(true, true);
+
 const clock = new THREE.Clock();
 function tick() {
   const dt = Math.min(clock.getDelta(), 0.05);
+  for (const p of partList) {
+    if (p.t === p.goal) continue;
+    p.t = p.goal > p.t ? Math.min(p.goal, p.t + dt / 0.7) : Math.max(p.goal, p.t - dt / 0.7);
+    applyPart(p);
+  }
+  if (hoverAt && !drag) { highlight(pickPart(hoverAt)); hoverAt = null; }
   if (fly) {
     fly.t = Math.min(1, fly.t + dt / 1.1);
     const s = fly.t * fly.t * (3 - 2 * fly.t);

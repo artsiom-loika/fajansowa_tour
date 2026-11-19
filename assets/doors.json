@@ -1,0 +1,459 @@
+{
+ "door_bedroom": {
+  "lm": "mv_doors",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.6057029118347832,
+  "all": false
+ },
+ "door_bath": {
+  "lm": "mv_doors",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.6057029118347832,
+  "all": false
+ },
+ "st_d00": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "st_d10": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "st_d01": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "st_d11": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "st_d02": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "st_d12": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "desk_dr0": {
+  "lm": "mv_living",
+  "kind": "slide",
+  "slide": [
+   0.36,
+   0.0,
+   -0.0
+  ]
+ },
+ "desk_dr1": {
+  "lm": "mv_living",
+  "kind": "slide",
+  "slide": [
+   0.36,
+   0.0,
+   -0.0
+  ]
+ },
+ "tvc_d0": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   -1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "tvc_d1": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "tvc_d2": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   -1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "tvc_d3": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "csw_d0": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "csw_d1": {
+  "lm": "mv_living",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "k_p1": {
+  "lm": "mv_kitchen",
+  "kind": "slide",
+  "slide": [
+   0.0,
+   0.0,
+   -0.44
+  ]
+ },
+ "k_dfo": {
+  "lm": "mv_kitchen",
+  "kind": "slide",
+  "slide": [
+   0.0,
+   0.0,
+   -0.38
+  ]
+ },
+ "k_dpot": {
+  "lm": "mv_kitchen",
+  "kind": "slide",
+  "slide": [
+   0.0,
+   0.0,
+   -0.42
+  ]
+ },
+ "k_dcut": {
+  "lm": "mv_kitchen",
+  "kind": "slide",
+  "slide": [
+   0.0,
+   0.0,
+   -0.37
+  ],
+  "requires": "k_dpot"
+ },
+ "k_dw": {
+  "lm": "mv_kitchen",
+  "kind": "rot",
+  "axis": [
+   -1.0,
+   0.0,
+   -0.0
+  ],
+  "angle": 1.4660765716752369,
+  "conflicts": [
+   "k_ds"
+  ]
+ },
+ "k_p2": {
+  "lm": "mv_kitchen",
+  "kind": "slide",
+  "slide": [
+   0.0,
+   0.0,
+   -0.42
+  ],
+  "conflicts": [
+   "k_ds"
+  ]
+ },
+ "k_ds": {
+  "lm": "mv_kitchen",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   -1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501,
+  "conflicts": [
+   "k_dw",
+   "k_p2"
+  ],
+  "all": false
+ },
+ "k_dsh": {
+  "lm": "mv_kitchen",
+  "kind": "slide",
+  "slide": [
+   -0.38,
+   0.0,
+   -0.0
+  ],
+  "requires": "k_ds",
+  "all": false
+ },
+ "k_dbk": {
+  "lm": "mv_kitchen",
+  "kind": "slide",
+  "slide": [
+   -0.4,
+   0.0,
+   -0.0
+  ],
+  "requires": "k_ds",
+  "all": false
+ },
+ "fr_d1": {
+  "lm": "mv_kitchen",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   -1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "fr_d0": {
+  "lm": "mv_kitchen",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   -1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "fr_d2": {
+  "lm": "mv_kitchen",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   -1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wh_d00": {
+  "lm": "mv_hall",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wh_d10": {
+  "lm": "mv_hall",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wh_d01": {
+  "lm": "mv_hall",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.2566370614359172
+ },
+ "wh_d11": {
+  "lm": "mv_hall",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.2566370614359172
+ },
+ "wb_d00": {
+  "lm": "mv_bed",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wb_d10": {
+  "lm": "mv_bed",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wb_d01": {
+  "lm": "mv_bed",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wb_d11": {
+  "lm": "mv_bed",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wb_d02": {
+  "lm": "mv_bed",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "wb_d12": {
+  "lm": "mv_bed",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "van_dr0": {
+  "lm": "mv_bath",
+  "kind": "slide",
+  "slide": [
+   -0.3,
+   0.0,
+   -0.0
+  ]
+ },
+ "van_dr1": {
+  "lm": "mv_bath",
+  "kind": "slide",
+  "slide": [
+   -0.3,
+   0.0,
+   -0.0
+  ]
+ },
+ "uc_d0": {
+  "lm": "mv_bath",
+  "kind": "rot",
+  "axis": [
+   -0.0,
+   -1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "uc_d1": {
+  "lm": "mv_bath",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   1.0,
+   0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "ws_d0": {
+  "lm": "mv_bath",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "ws_d1": {
+  "lm": "mv_bath",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 1.53588974175501
+ },
+ "cat_d": {
+  "lm": "mv_bath",
+  "kind": "rot",
+  "axis": [
+   0.0,
+   -1.0,
+   -0.0
+  ],
+  "angle": 0.7853981633974483
+ }
+}

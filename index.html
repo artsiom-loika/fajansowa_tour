@@ -26,6 +26,7 @@
                   padding: 8px 12px; border-radius: 9px; cursor: pointer; white-space: nowrap; }
   #rooms button:hover { background: rgba(255, 255, 255, .08); }
   #rooms button.on { background: var(--accent); color: #1b1916; }
+  #rooms button.cab { margin-left: 6px; border: 1px solid var(--line); }
   #map { top: 16px; right: 16px; width: 180px; padding: 8px; background: var(--panel); border: 1px solid var(--line);
          border-radius: 12px; backdrop-filter: blur(10px); }
   #map svg { display: block; width: 100%; height: auto; cursor: crosshair; }
@@ -54,7 +55,7 @@
 <div id="title" class="ui"><b>Fajansowa 3</b><span>Дизайн-проект · 49,8 м²</span></div>
 <div id="map" class="ui"></div>
 <div id="rooms" class="ui"></div>
-<div id="help" class="ui">Тяните — осмотреться · WASD / стрелки — идти · клик по полу — перейти</div>
+<div id="help" class="ui">Тяните — осмотреться · WASD / стрелки — идти · клик по полу — перейти · клик по шкафу или двери — открыть</div>
 <script type="module" src="./main.js"></script>
 </body>
 </html>
